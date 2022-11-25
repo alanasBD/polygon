@@ -66,7 +66,7 @@ export default function Home() {
      {
       data.map((user,index) =>  <Cart key={index}></Cart>)
      }
-      
+      <h2>Hello</h2>
   </div>
       
     
