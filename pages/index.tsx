@@ -112,7 +112,7 @@ export default function Home() {
                
                 {data.slice(0, 6).map((card, index) => (
                    <Grid item  xs={4}>
-                     <Item style={{boxShadow:"none"}}>
+                     <Item style={{boxShadow:"none",padding:"0"}}>
                         <LocationCard />
                      </Item>
                    </Grid>
