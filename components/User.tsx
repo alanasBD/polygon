@@ -19,12 +19,12 @@ const User = () => {
   return (
     <div style={{ margin: "20px 0" }}>
       <Grid container spacing={1}>
-        <Grid item xs={4}>
+        <Grid item xs={4} sm={6} md={4}>
           <Item style={alignCenter} sx={{ boxShadow:1 }}>
             <h3>Total Footprint : 500</h3>
           </Item>
         </Grid>
-        <Grid item xs={4} >
+        <Grid item xs={4}  sm={6} md={4}>
           <Item sx={{ boxShadow: 1 }} style={{display:"flex",alignItems:"center"}}>
             
                 <div>
@@ -35,7 +35,7 @@ const User = () => {
            
           </Item>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={4} sm={6} md={4}>
           <Item sx={{ boxShadow: 1 }}>
             <h3 className="user-margin-h2">Male:</h3>
             <h3 className="user-margin-h2">asgasg</h3>

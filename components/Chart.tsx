@@ -19,7 +19,7 @@ const Chart = (props: any) => {
         <ResponsiveContainer width="100%" height={500}>
         <BarChart  data={props.data}>
           <Bar dataKey="uv" fill="#8884d8" />
-          <XAxis dataKey="name"   />
+          <XAxis dataKey={props.length}   />
           <Tooltip/>
         </BarChart>
         </ResponsiveContainer>

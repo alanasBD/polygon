@@ -22,14 +22,6 @@ const LocationCard = () => {
   return (
     <div>
       <Card sx={{ maxWidth: 500 }} className="card-responsive">
-        {/* <Typography
-          style={{ padding: "15px 15px" }}
-          gutterBottom
-          variant="h6"
-          component="div"
-        >
-          Mirpur
-        </Typography> */}
         <h4 style={{padding:"0 15px"}}>Mirpur</h4>
         <CardMedia
           component="img"

@@ -143,7 +143,7 @@ export default function Home() {
               <Grid container spacing={2}>
                 {data.slice(0, 6).map((card, index) => (
                   <Grid item md={4} sm={6} xs={12}>
-                    <Item style={{ boxShadow: "none", padding: "0" }} className="card-responsive">
+                    <Item style={{ boxShadow: "none", padding: "0" }} >
              
                         <LocationCard  />
                      
