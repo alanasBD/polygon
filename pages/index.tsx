@@ -10,6 +10,7 @@ import User from "../components/User";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import LocationCard from "../components/LocationCard";
+import { useState } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
  // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -67,34 +68,53 @@ const data = [
 ];
 
 export default function Home() {
-  const handleClick = () => {
-    console.log("clicked");
+  const [btn,setBtn] = useState("");
+  const handleClick = (name:string) => {
+    setBtn(name)
+
   };
   return (
     <div>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <Item>xs=8</Item>
+        <Grid item md={3}>
+          <Item>Dashboard</Item>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item md={9}>
           <Item>
-            <div>
-              <Box sx={{ boxShadow: 2 }} style={{ width: "100%" }}>
+            <div >
+              <Box sx={{ boxShadow: 1 }}  style={{ width: "100%"}}>
                 <div style={{ margin: "10px 20px", padding: "20px 10px" }}>
                   <Button
-                    onClick={handleClick}
+                    style={{margin:"10px 5px"}}
+                    onClick={()=>handleClick("btn-1")}
+                    color={`${btn === "btn-1" ? "success" :"primary"}`}
                     sx={{ mx: 1 }}
                     variant="contained"
                   >
                     Today
                   </Button>
-                  <Button sx={{ mx: 1 }} variant="contained">
+                  <Button 
+                  sx={{ mx: 1 }} 
+                  style={{margin:"10px 5px"}}
+                  onClick={()=>handleClick("btn-2")}
+                  color={`${btn === "btn-2" ? "success" :"primary"}`}
+                  variant="contained">
                     Last 7 days
                   </Button>
-                  <Button sx={{ mx: 1 }} variant="contained">
+                  <Button 
+                  sx={{ mx: 1 }} 
+                  style={{margin:"10px 5px"}}
+                  onClick={()=>handleClick("btn-3")}
+                  color={`${btn === "btn-3" ? "success" :"primary"}`}
+                  variant="contained">
                     Last 30 days
                   </Button>
-                  <Button sx={{ mx: 1 }} variant="contained">
+                  <Button
+                   sx={{ mx: 1 }} 
+                   style={{margin:"10px 5px"}}
+                   onClick={()=>handleClick("btn-4")}
+                   color={`${btn === "btn-4" ? "success" :"primary"}`}
+                   variant="contained">
                     Custom
                   </Button>
                 </div>

@@ -9,6 +9,7 @@ import { Box, Divider } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
+import { BsFillCircleFill } from "react-icons/bs";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -20,8 +21,13 @@ const Item = styled(Paper)(({ theme }) => ({
 const LocationCard = () => {
   return (
     <div>
-      <Card  sx={{ maxWidth: 500 }}>
-        <Typography style={{padding:"5px 10px"}} gutterBottom variant="h5" component="div">
+      <Card sx={{ maxWidth: 500 }}>
+        <Typography
+          style={{ padding: "15px 15px" }}
+          gutterBottom
+          variant="h6"
+          component="div"
+        >
           Mirpur
         </Typography>
         <CardMedia
@@ -33,16 +39,44 @@ const LocationCard = () => {
         <CardContent>
           <div style={{ display: "flex" }}>
             <div style={{ borderRight: "1px  solid", width: "50%" }}>
-              <h4>Order :</h4>
-              <h4>Power : </h4>
-              <h4>Water :</h4>
-              <h4>Supply :</h4>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill
+                  style={{ marginLeft: "5px", color: "blue" }}
+                />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill
+                  style={{ marginLeft: "5px", color: "green" }}
+                />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
+              </div>
             </div>
             <div style={{ width: "50%", paddingLeft: "30px" }}>
-              <h4>Order :</h4>
-              <h4>Power : </h4>
-              <h4>Water :</h4>
-              <h4>Supply :</h4>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill
+                  style={{ marginLeft: "5px", color: "blue" }}
+                />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4>Order : </h4>
+                <BsFillCircleFill
+                  style={{ marginLeft: "5px", color: "green" }}
+                />
+              </div>
             </div>
           </div>
         </CardContent>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, Bar,XAxis, Tooltip  } from "recharts";
+import { BarChart, Bar,XAxis, Tooltip, ResponsiveContainer  } from "recharts";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -16,11 +16,14 @@ const Chart = (props: any) => {
     <div>
       <h2>Footprint</h2>
         <Divider />
-        <BarChart width={1000} height={500} data={props.data}>
+        <ResponsiveContainer width={1000} height={500}>
+        <BarChart  data={props.data}>
           <Bar dataKey="uv" fill="#8884d8" />
           <XAxis dataKey="name"   />
           <Tooltip/>
         </BarChart>
+        </ResponsiveContainer>
+      
    
     </div>
   );

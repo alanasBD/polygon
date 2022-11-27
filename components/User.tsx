@@ -18,14 +18,14 @@ const alignCenter = {
 const User = () => {
   return (
     <div style={{ margin: "20px 0" }}>
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={4}>
           <Item style={alignCenter} sx={{ boxShadow: 2 }}>
             <h2>Total Footprint : 500</h2>
           </Item>
         </Grid>
-        <Grid item xs={4}>
-          <Item sx={{ boxShadow: 2 }}>
+        <Grid item xs={4} >
+          <Item sx={{ boxShadow: 1 }}>
             <div>
            
                 <h2>Male-Footprint : 200</h2>
@@ -35,7 +35,7 @@ const User = () => {
           </Item>
         </Grid>
         <Grid item xs={4}>
-          <Item sx={{ boxShadow: 2 }}>
+          <Item sx={{ boxShadow: 1 }}>
             <h2>asgasg</h2>
             <h2>asgasg</h2>
             <h2>asgasg</h2>
