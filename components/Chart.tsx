@@ -13,10 +13,10 @@ const style = {
 };
 const Chart = (props: any) => {
   return (
-    <div>
-      <h2>Footprint</h2>
+    <div style={{margin:"30px 0"}}>
+      <h2 style={{color:"#000"}}>Footprint</h2>
         <Divider />
-        <ResponsiveContainer width={1000} height={500}>
+        <ResponsiveContainer width="100%" height={500}>
         <BarChart  data={props.data}>
           <Bar dataKey="uv" fill="#8884d8" />
           <XAxis dataKey="name"   />

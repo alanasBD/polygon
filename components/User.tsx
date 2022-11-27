@@ -8,7 +8,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: "left",
   // color: theme.palette.text.secondary,
-  height: 230,
+  height: 210,
 }));
 const alignCenter = {
   display: "flex",
@@ -20,26 +20,28 @@ const User = () => {
     <div style={{ margin: "20px 0" }}>
       <Grid container spacing={1}>
         <Grid item xs={4}>
-          <Item style={alignCenter} sx={{ boxShadow: 2 }}>
-            <h2>Total Footprint : 500</h2>
+          <Item style={alignCenter} sx={{ boxShadow:1 }}>
+            <h3>Total Footprint : 500</h3>
           </Item>
         </Grid>
         <Grid item xs={4} >
-          <Item sx={{ boxShadow: 1 }}>
-            <div>
-           
-                <h2>Male-Footprint : 200</h2>
-                <h2>Male-Earning : 500</h2>
+          <Item sx={{ boxShadow: 1 }} style={{display:"flex",alignItems:"center"}}>
+            
+                <div>
+                  <h3 className="user-margin-h2">Male-Footprint : 200</h3>
+                  <h3 className="user-margin-h2">Male-Earning : 500</h3>
+                </div>
               
-            </div>
+           
           </Item>
         </Grid>
         <Grid item xs={4}>
           <Item sx={{ boxShadow: 1 }}>
-            <h2>asgasg</h2>
-            <h2>asgasg</h2>
-            <h2>asgasg</h2>
-            <h2>asgasg</h2>
+            <h3 className="user-margin-h2">Male:</h3>
+            <h3 className="user-margin-h2">asgasg</h3>
+            <h3 className="user-margin-h2">asgasg</h3>
+            <h3 className="user-margin-h2">asgasg</h3>
+            <h3 className="user-margin-h2">asgasg</h3>
           </Item>
         </Grid>
       </Grid>

@@ -24,3 +24,6 @@ a {
     background: black;
   }
 }
+
+@import url("../styles/locationCard.css");
+@import url("../styles/user.css");

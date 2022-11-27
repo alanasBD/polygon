@@ -1,0 +1,14 @@
+.bg{
+    background: green;
+}
+
+.margin-h2{
+    margin:0;
+    padding:8px 0;
+}
+
+@media only screen  and (max-width:599px) {
+    .card-responsive{
+        margin:0 auto;
+    }
+}

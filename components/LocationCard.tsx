@@ -21,15 +21,16 @@ const Item = styled(Paper)(({ theme }) => ({
 const LocationCard = () => {
   return (
     <div>
-      <Card sx={{ maxWidth: 500 }}>
-        <Typography
+      <Card sx={{ maxWidth: 500 }} className="card-responsive">
+        {/* <Typography
           style={{ padding: "15px 15px" }}
           gutterBottom
           variant="h6"
           component="div"
         >
           Mirpur
-        </Typography>
+        </Typography> */}
+        <h4 style={{padding:"0 15px"}}>Mirpur</h4>
         <CardMedia
           component="img"
           height="140"
@@ -37,42 +38,46 @@ const LocationCard = () => {
           alt="green iguana"
         />
         <CardContent>
+          {/* Location-card left */}
           <div style={{ display: "flex" }}>
-            <div style={{ borderRight: "1px  solid", width: "50%" }}>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+            <div style={{ borderRight: "1px #CCCCCC  solid", width: "50%" }}>
+              <div  style={{ display: "flex", alignItems: "center" }}>
+                <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill
                   style={{ marginLeft: "5px", color: "blue" }}
                 />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill
                   style={{ marginLeft: "5px", color: "green" }}
                 />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
               </div>
             </div>
+
+
+            {/* Location-card right */}
             <div style={{ width: "50%", paddingLeft: "30px" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4  className="margin-h2">Order : </h4>
                 <BsFillCircleFill
                   style={{ marginLeft: "5px", color: "blue" }}
                 />
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <h4>Order : </h4>
+                <h4  className="margin-h2">Order : </h4>
                 <BsFillCircleFill
                   style={{ marginLeft: "5px", color: "green" }}
                 />
