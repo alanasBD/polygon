@@ -33,16 +33,16 @@ const LocationCard = () => {
         <CardContent>
           <div style={{ display: "flex" }}>
             <div style={{ borderRight: "1px  solid", width: "50%" }}>
-              <h2>Order :</h2>
-              <h2>Power : </h2>
-              <h2>Water :</h2>
-              <h2>Supply :</h2>
+              <h4>Order :</h4>
+              <h4>Power : </h4>
+              <h4>Water :</h4>
+              <h4>Supply :</h4>
             </div>
             <div style={{ width: "50%", paddingLeft: "30px" }}>
-              <h2>Order :</h2>
-              <h2>Power : </h2>
-              <h2>Water :</h2>
-              <h2>Supply :</h2>
+              <h4>Order :</h4>
+              <h4>Power : </h4>
+              <h4>Water :</h4>
+              <h4>Supply :</h4>
             </div>
           </div>
         </CardContent>
