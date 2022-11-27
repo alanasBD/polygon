@@ -14,19 +14,14 @@ const style = {
 const Chart = (props: any) => {
   return (
     <div>
-      <List sx={style} style={{margin:"20px 0"}} component="nav" aria-label="mailbox folders">
-        <ListItem>
-          <Typography variant="h5" gutterBottom>
-            Total Foot print
-          </Typography>
-        </ListItem>
+      <h2>Footprint</h2>
         <Divider />
-        <BarChart width={1000} height={400} data={props.data}>
+        <BarChart width={1000} height={500} data={props.data}>
           <Bar dataKey="uv" fill="#8884d8" />
           <XAxis dataKey="name"   />
           <Tooltip/>
         </BarChart>
-      </List>
+   
     </div>
   );
 };

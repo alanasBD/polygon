@@ -17,12 +17,12 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const Cart = () => {
+const LocationCard = () => {
   return (
     <div>
-      <Card sx={{ maxWidth: 500 }}>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
+      <Card  sx={{ maxWidth: 500 }}>
+        <Typography style={{padding:"5px 10px"}} gutterBottom variant="h5" component="div">
+          Mirpur
         </Typography>
         <CardMedia
           component="img"
@@ -31,20 +31,24 @@ const Cart = () => {
           alt="green iguana"
         />
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid item xs={5}>
-            <Item>  asdfsd</Item>
-            </Grid>
-          
-     
-            <Grid item xs={5}>
-              <Item>xs=8</Item>
-            </Grid>
-          </Grid>
+          <div style={{ display: "flex" }}>
+            <div style={{ borderRight: "1px  solid", width: "50%" }}>
+              <h2>Order :</h2>
+              <h2>Power : </h2>
+              <h2>Water :</h2>
+              <h2>Supply :</h2>
+            </div>
+            <div style={{ width: "50%", paddingLeft: "30px" }}>
+              <h2>Order :</h2>
+              <h2>Power : </h2>
+              <h2>Water :</h2>
+              <h2>Supply :</h2>
+            </div>
+          </div>
         </CardContent>
       </Card>
     </div>
   );
 };
 
-export default Cart;
+export default LocationCard;

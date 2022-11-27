@@ -3,16 +3,17 @@ import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import dynamic from "next/dynamic";
-import Cart from "../components/Cart";
+
 import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import User from "../components/User";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import LocationCard from "../components/LocationCard";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
+ // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+ // ...theme.typography.body2,
   padding: theme.spacing(1),
 
   color: theme.palette.text.secondary,
@@ -78,10 +79,7 @@ export default function Home() {
         <Grid item xs={9}>
           <Item>
             <div>
-              <Box
-                sx={{ boxShadow: 2 }}
-                style={{ width: "1000px" }}
-              >
+              <Box sx={{ boxShadow: 2 }} style={{ width: "100%" }}>
                 <div style={{ margin: "10px 20px", padding: "20px 10px" }}>
                   <Button
                     onClick={handleClick}
@@ -106,6 +104,20 @@ export default function Home() {
 
               <Chart data={data} />
               <Chart data={data} />
+              {/* {data.slice(0, 6).map((card, index) => (
+                <LocationCard />
+              ))} */}
+              <Grid container  spacing={2}>
+                
+               
+                {data.slice(0, 6).map((card, index) => (
+                   <Grid item  xs={4}>
+                     <Item style={{boxShadow:"none"}}>
+                        <LocationCard />
+                     </Item>
+                   </Grid>
+                ))}
+              </Grid>
             </div>
           </Item>
         </Grid>
