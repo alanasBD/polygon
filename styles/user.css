@@ -1,4 +1,18 @@
 .user-margin-h2{
     margin:0;
-    padding:6px 0;
+    padding:4px 0;
+    
+}
+
+.user-bg-1{
+    background: linear-gradient(to left, #928DAB, #00d2ff);
+
+}
+
+.user-bg-2{
+    background: linear-gradient(to left, #eecda3, #ef629f);
+}
+
+.user-bg-3{
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
 }

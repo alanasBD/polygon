@@ -11,7 +11,8 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import LocationCard from "../components/LocationCard";
 import { useState } from "react";
-import FormControl from "@mui/material/FormControl";
+import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   // ...theme.typography.body2,
@@ -24,43 +25,43 @@ const Chart = dynamic(import("../components/Chart"), { ssr: false });
 
 const data = [
   {
-    name: "Page A",
+    name: 'Page A',
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "Page B",
+    name: 'Page B',
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "Page C",
+    name: 'Page C',
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "Page D",
+    name: 'Page D',
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "Page E",
+    name: 'Page E',
     uv: 1890,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: "Page F",
+    name: 'Page F',
     uv: 2390,
     pv: 3800,
     amt: 2500,
   },
   {
-    name: "Page G",
+    name: 'Page G',
     uv: 3490,
     pv: 4300,
     amt: 2100,
@@ -69,9 +70,21 @@ const data = [
 
 export default function Home() {
   const [btn, setBtn] = useState("");
+  // const [data,setData] = useState([]);
+  
+
   const handleClick = (name: string) => {
+
     setBtn(name);
+    // fetch("data.json")
+    // .then(res => res.json())
+    // .then(info => setData(info))
+
   };
+
+
+  console.log(data);
+  
   return (
     <div>
       <Grid container spacing={2}>
@@ -81,10 +94,10 @@ export default function Home() {
         <Grid item md={9}>
           <Item>
             <div>
-              <Box sx={{ boxShadow: 1 }} style={{ width: "100%" }}>
-                <div style={{ margin: "10px 20px", padding: "20px 10px" }}>
+              <Box  style={{ width: "100%",boxShadow:"-8px 12px 18px 0 #dadee8",borderRadius:"7px" }}>
+                <div style={{ margin: "10px 20px", padding: "20px 10px"}}>
                   <Button
-                    style={{ margin: "10px 5px" }}
+                    style={{ margin: "10px 5px",fontFamily:"monospace"}}
                     onClick={() => handleClick("btn-1")}
                     color={`${btn === "btn-1" ? "success" : "primary"}`}
                     sx={{ mx: 1 }}
@@ -94,7 +107,7 @@ export default function Home() {
                   </Button>
                   <Button
                     sx={{ mx: 1 }}
-                    style={{ margin: "10px 5px" }}
+                    style={{ margin: "10px 5px",fontFamily:"monospace" }}
                     onClick={() => handleClick("btn-2")}
                     color={`${btn === "btn-2" ? "success" : "primary"}`}
                     variant="contained"
@@ -103,7 +116,7 @@ export default function Home() {
                   </Button>
                   <Button
                     sx={{ mx: 1 }}
-                    style={{ margin: "10px 5px" }}
+                    style={{ margin: "10px 5px",fontFamily:"monospace" }}
                     onClick={() => handleClick("btn-3")}
                     color={`${btn === "btn-3" ? "success" : "primary"}`}
                     variant="contained"
@@ -111,27 +124,27 @@ export default function Home() {
                     Last 30 days
                   </Button>
 
-                  <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                    <InputLabel id="demo-select-small">Day</InputLabel>
-                    <Select
-                      onClick={() => handleClick("btn-4")}
-                      color={`${btn === "btn-4" ? "success" : "primary"}`}
-                      labelId="demo-select-small"
-                      id="demo-select-small"
-                      // value={age}
-                      label="Age"
-                      //onChange={handleChange}
-                    >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={10}>Today</MenuItem>
-                      <MenuItem value={20}>Last 7 Days</MenuItem>
-                      <MenuItem value={30}>Last 30 Days</MenuItem>
-                    </Select>
-                  </FormControl>
+                  {/* Date picker */}
+                  <span 
+                  onClick={() => handleClick("btn-4")}
+                  color={`${btn === "btn-4" ? "success" : "primary"}`}
+                  style={{marginLeft:"5px"}}>
+              
+                      <TextField
+                        id="date"
+                        label="Date"
+                        type="date"
+                        defaultValue="2017-05-24"
+                        sx={{ width: 220 }}
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                      />
+              
+                  </span>
                 </div>
               </Box>
+
               <User />
               <User />
 
@@ -143,10 +156,8 @@ export default function Home() {
               <Grid container spacing={2}>
                 {data.slice(0, 6).map((card, index) => (
                   <Grid item md={4} sm={6} xs={12}>
-                    <Item style={{ boxShadow: "none", padding: "0" }} >
-             
-                        <LocationCard  />
-                     
+                    <Item style={{ boxShadow: "none", padding: "0" }}>
+                      <LocationCard />
                     </Item>
                   </Grid>
                 ))}
