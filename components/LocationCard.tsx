@@ -58,7 +58,7 @@ const LocationCard = () => {
 
 
             {/* Location-card right */}
-            <div style={{ width: "50%", paddingLeft: "30px" }}>
+            <div style={{ width: "50%", paddingLeft: "30px",fontSize:"15px" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <h4 className="margin-h2">Order : </h4>
                 <BsFillCircleFill style={{ marginLeft: "5px", color: "red" }} />

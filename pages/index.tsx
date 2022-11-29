@@ -70,15 +70,15 @@ const data = [
 
 export default function Home() {
   const [btn, setBtn] = useState("");
-  // const [data,setData] = useState([]);
+  const [data,setData] = useState([]);
   
 
   const handleClick = (name: string) => {
 
     setBtn(name);
-    // fetch("data.json")
-    // .then(res => res.json())
-    // .then(info => setData(info))
+     fetch("data.json")
+    .then(res => res.json())
+    .then(info => setData(info))
 
   };
 
