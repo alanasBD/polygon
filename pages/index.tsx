@@ -97,7 +97,7 @@ export default function Home() {
               <Box  style={{ width: "100%",boxShadow:"-8px 12px 18px 0 #dadee8",borderRadius:"7px" }}>
                 <div style={{ margin: "10px 20px", padding: "20px 10px"}}>
                   <Button
-                    style={{ margin: "10px 5px",fontFamily:"monospace"}}
+                    style={{ margin: "10px 5px",fontFamily:"monospace",padding:"10px 20px"}}
                     onClick={() => handleClick("btn-1")}
                     color={`${btn === "btn-1" ? "success" : "primary"}`}
                     sx={{ mx: 1 }}
@@ -107,7 +107,7 @@ export default function Home() {
                   </Button>
                   <Button
                     sx={{ mx: 1 }}
-                    style={{ margin: "10px 5px",fontFamily:"monospace" }}
+                    style={{ margin: "10px 5px",fontFamily:"monospace",padding:"10px 20px"}}
                     onClick={() => handleClick("btn-2")}
                     color={`${btn === "btn-2" ? "success" : "primary"}`}
                     variant="contained"
@@ -116,7 +116,7 @@ export default function Home() {
                   </Button>
                   <Button
                     sx={{ mx: 1 }}
-                    style={{ margin: "10px 5px",fontFamily:"monospace" }}
+                    style={{ margin: "10px 5px",fontFamily:"monospace",padding:"10px 20px" }}
                     onClick={() => handleClick("btn-3")}
                     color={`${btn === "btn-3" ? "success" : "primary"}`}
                     variant="contained"
