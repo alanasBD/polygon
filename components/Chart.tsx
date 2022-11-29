@@ -25,7 +25,7 @@ const Chart = (props: any) => {
       <Divider />
       <ResponsiveContainer width="100%" height={500}>
         <BarChart data={data}>
-          <Bar dataKey="uv" fill="#8884d8"/>
+          <Bar dataKey="balance" fill="#8884d8"/>
           <XAxis dataKey={props.length} />
           <Tooltip />
         </BarChart>
